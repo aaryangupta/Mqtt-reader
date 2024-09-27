@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mqtt-broker:
+    image: eclipse-mosquitto:latest  # Mosquitto broker image
+    container_name: mosquitto-broker
+    ports:
+      - "1883:1883"
+    networks:
+      - mqtt-network
+    # Uncomment the below lines if you want to use a custom mosquitto.conf
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+
+networks:
+  mqtt-network:
+    driver: bridge  
