@@ -1,6 +1,6 @@
 # Mqtt-reader
 
-docker-compose up
+docker run -it --name dockerbroker -v ./config:/mosquitto/config/ eclipse-mosquitto:latest
 
 docker build -t mqttsubc .
 
