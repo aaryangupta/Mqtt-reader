@@ -32,7 +32,7 @@ Note : We are allowing all anonymous user for just demo, if using in production,
 
 Now create a mosquitto broker container from eclipse-mosquitto docker image. Run below commnad :
 
-docker run -it --name dockerbroker -v ./config:/mosquitto/config/ eclipse-mosquitto:latest
+"docker run -it --name dockerbroker -v ./config:/mosquitto/config/ eclipse-mosquitto:latest"
 
 ![Sample Image](./images/image-2.PNG)
 
@@ -47,13 +47,13 @@ After succesfully testing in machine, now create container for this python progr
 
 After creating Dockerfile, need to run below commnad :
 
-docker build -t mqttsubc .
+" docker build -t mqttsubc . "
 
 ![Sample Image](./images/image5.PNG)
 
 This command will make image with name of "mqttsubc". After that make a container from this image feom below command :
 
-docker run -it mqttsubc
+" docker run -it mqttsubc "
 
 ![Sample Image](./images/image6.PNG)
 
@@ -61,7 +61,7 @@ Great !!, you both broker & subscriber container are running, even you can check
 
 Now open your command prompt and run below commnad to publish data to broker and you will se publish data where your subscriber container is running.
 
-mosquitto_pub -h localhost -p 1883 -t "/events" -m '{"sensor_value":20.5}'
+" mosquitto_pub -h localhost -p 1883 -t "/events" -m '{"sensor_value":20.5}' "
 
 ![Sample Image](./images/image7.PNG)
 
