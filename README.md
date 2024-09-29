@@ -9,7 +9,7 @@ on the topic /events
 
 Solution :
 
-To solve this , first we hava created a container for mosquitto broker from eclipse-mosquitto docker image. After making broker image, then i create a python program which will subcribe my mqtt broker to a particular topic and fetch whatever data is coming to that topic on broker. 
+To solve this , first we hava created a container for mosquitto broker from eclipse-mosquitto docker image. After making broker image, then i create a python program using gmqtt library and async function, which will subcribe my mqtt broker to a particular topic and fetch whatever data is coming to that topic on broker. 
 
 After that, i have create a dockerfile to convert this python program into Docker image. For that i have used python:3.11-slim docker image to build. After succesfully build the image, i run that image to make a subscriber container, which will subscribe my mqtt-broker. 
 
@@ -37,7 +37,7 @@ docker run -it --name dockerbroker -v ./config:/mosquitto/config/ eclipse-mosqui
 ![Sample Image](./images/image-2.PNG)
 
 Step-2 :
-First we will create a python program which will subscribe my mqtt-broker. And test it with container broker . 
+First we will create a python program using gmqtt library and async function, which will subscribe my mqtt-broker. And test it with container broker . 
 
 ![Sample Image](./images/image3.PNG)
 
