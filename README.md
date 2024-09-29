@@ -17,7 +17,7 @@ For publish data, i used mqtt_pub command to publish data to my topic into mqtt-
 
 Let's make this solution into steps: 
 
-pre-requisite : If you run running this on windows, ensure Docker desktop is installed and running into your machine. 
+pre-requisite : If you run running this on windows, ensure Docker desktop is installed and running into your machine. and Make sure you have mosquitto-clients available on your system so you can use commands like mosquitto_pub.
 
 Step -1 :
 Create a config folder, and in that folder create a file name > mosquitto.conf ,
