@@ -26,7 +26,7 @@ Add these two below line into that file.
 allow_anonymous true
 listener 1883 0.0.0.0
 
-![Sample Image](./images/image1.png)
+![Sample Image](./images/image1.PNG)
 
 Note : We are allowing all anonymous user for just demo, if using in production, user need to authenticate them first to access broker. And we are allowing all ips as container need to be exposed into outside world.
 
