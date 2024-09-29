@@ -1,6 +1,6 @@
 # Mqtt-reader
 
-docker run -it --name dockerbroker -v ./config:/mosquitto/config/ eclipse-mosquitto:latest
+choker run -it --name dockerbroker -v ./config:/mosquitto/config/ eclipse-mosquitto:latest
 
 docker build -t mqttsubc .
 
